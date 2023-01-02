@@ -26,7 +26,7 @@ export default function SingleBlogPost(props) {
         <PostDate post={props.post} />
         <PostTitle title={props.post.fields.title} />
         <CategoryTags post={props.post} />
-        <Content content={props.post.fields.body} />
+        <Content>{props.post.fields.body}</Content>
         <References post={props.post} />
       </article>
     </Layout>

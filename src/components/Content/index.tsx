@@ -8,17 +8,17 @@ import {
 import { useDarkMode } from "src/hooks"
 
 type ContentProps = {
-  content: string
+  children: string
 }
 
-export const Content = ({ content }: ContentProps) => {
+export const Content = ({ children }: ContentProps) => {
   const { isDarkmode } = useDarkMode()
   return (
     <>
       {/* <div> */}
       <div className="prose prose-pre:p-0 prose-pre:bg-transparent mt-14 dark:prose-invert prose-h2:text-xl prose-h2:font-normal">
         <ReactMarkdown
-          children={content}
+          children={children}
           components={{
             code({ node, inline, className, children, ...props }) {
               // console.log({ node, inline, className, children, props })
