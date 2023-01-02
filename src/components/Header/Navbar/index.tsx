@@ -12,7 +12,12 @@ export const Navbar = () => {
         <Logo />
         <div className="flex items-center gap-10 mx-auto">
           {navLinkData.map((link) => (
-            <NavLink icon={link.icon} title={link.title} link={link.link} />
+            <NavLink
+              key={link.id}
+              icon={link.icon}
+              title={link.title}
+              link={link.link}
+            />
           ))}
         </div>
         <div className="flex gap-10">
